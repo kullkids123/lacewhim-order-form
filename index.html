@@ -5,9 +5,15 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>lacewhim ♡ order form</title>
 <link href="https://fonts.googleapis.com/css2?family=Allison&family=Comic+Neue:wght@400;700&family=Fredoka:wght@400;500;600&display=swap" rel="stylesheet">
+
 <style>
 *{box-sizing:border-box}
-body{margin:0;background:linear-gradient(#fffafd,#f7eaf1);color:#75616b;font:18px 'Comic Neue',cursive}
+body{
+margin:0;
+background:linear-gradient(#fffafd,#f7eaf1);
+color:#75616b;
+font:18px 'Comic Neue',cursive
+}
 .wrap{max-width:690px;margin:auto;padding:25px 20px 65px}
 header{text-align:center;padding:35px 0}
 .logo{font:90px Allison,cursive;color:#b98099;line-height:1}
@@ -15,34 +21,108 @@ header p{letter-spacing:2px}
 .steps{display:flex;justify-content:center;gap:10px;margin:25px 0 35px}
 .dot{width:85px;height:9px;border-radius:20px;background:#eadce3}
 .dot.active{background:#c7859e}
-.panel{background:#fffdfd;border:1px solid #eadce3;border-radius:34px;padding:32px;box-shadow:0 10px 30px #dca9bc18}
+.panel{
+background:#fffdfd;
+border:1px solid #eadce3;
+border-radius:34px;
+padding:32px;
+box-shadow:0 10px 30px #dca9bc18
+}
 h2,h3{font-family:Fredoka,sans-serif;color:#b47a93}
 h2{font-size:32px;margin-top:0}
 p{line-height:1.7}
-.choice{display:flex;align-items:center;gap:18px;padding:25px 20px;margin:17px 0;border:1px solid #eadce3;border-radius:28px;background:#fffafd;font:21px Fredoka,sans-serif}
+.choice{
+display:flex;
+align-items:center;
+gap:18px;
+padding:25px 20px;
+margin:17px 0;
+border:1px solid #eadce3;
+border-radius:28px;
+background:#fffafd;
+font:21px Fredoka,sans-serif
+}
 .choice input{width:24px;height:24px;accent-color:#c7859e}
 .choice .emoji{font-size:30px}
 .field{display:block;margin:18px 0 7px;font-weight:bold}
-input:not([type=checkbox]):not([type=file]),select,textarea{width:100%;padding:14px;border:1px solid #e7d5df;border-radius:15px;background:#fffafd;color:#75616b;font:17px 'Comic Neue',cursive}
+input:not([type=checkbox]):not([type=file]),
+select,textarea{
+width:100%;
+padding:14px;
+border:1px solid #e7d5df;
+border-radius:15px;
+background:#fffafd;
+color:#75616b;
+font:17px 'Comic Neue',cursive
+}
 textarea{min-height:90px}
 input[type=file]{max-width:100%}
-button{border:0;border-radius:28px;background:#c7859e;color:white;padding:15px 22px;font:17px Fredoka,sans-serif;cursor:pointer}
+button{
+border:0;
+border-radius:28px;
+background:#c7859e;
+color:white;
+padding:15px 22px;
+font:17px Fredoka,sans-serif;
+cursor:pointer
+}
 button:disabled{opacity:.6}
 .secondary{background:#f0e1e9;color:#9d7185}
-.nav{display:flex;justify-content:space-between;gap:10px;border-top:1px solid #eadce3;padding-top:25px;margin-top:30px}
+.nav{
+display:flex;
+justify-content:space-between;
+gap:10px;
+border-top:1px solid #eadce3;
+padding-top:25px;
+margin-top:30px
+}
 .nav button:last-child{margin-left:auto}
-.item{padding:20px;border:1px solid #eadce3;border-radius:22px;margin:15px 0;background:#fffafd}
 .note{font-size:14px;color:#947a87}
-.summary{padding:18px;background:#fff5f9;border-radius:18px;margin:15px 0;white-space:pre-wrap;line-height:1.7}
+.summary{
+padding:18px;
+background:#fff5f9;
+border-radius:18px;
+margin:15px 0;
+white-space:pre-wrap;
+line-height:1.7
+}
 .error{color:#c24e72;margin-top:15px}
 .hidden{display:none}
 footer{text-align:center;margin-top:35px;font-size:15px}
 a{color:#b47a93}
-@media(max-width:450px){.wrap{padding:15px 14px}.panel{padding:25px 20px}.logo{font-size:75px}.choice{font-size:19px}}
+.color-grid{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:10px;
+margin-top:12px
+}
+.color-option{
+display:flex;
+align-items:center;
+gap:10px;
+background:#fff7fa;
+border:1px solid #eadce3;
+border-radius:15px;
+padding:13px;
+font-size:16px
+}
+.color-option input{
+accent-color:#c7859e;
+width:19px;
+height:19px
+}
+@media(max-width:450px){
+.wrap{padding:15px 14px}
+.panel{padding:25px 20px}
+.logo{font-size:75px}
+.choice{font-size:19px}
+}
 </style>
 </head>
+
 <body>
 <div class="wrap">
+
 <header>
 <div class="logo">lacewhim</div>
 <p>♡ a little order form, made with love ♡</p>
@@ -91,11 +171,17 @@ a{color:#b47a93}
 
 <section id="customer" class="hidden">
 <h2>almost there, lovely ♡</h2>
+
 <label class="field">Name / nickname *</label>
 <input id="name" placeholder="Your name">
+
 <label class="field">Telegram username *</label>
 <input id="telegram" placeholder="@username">
-<p class="note">Shipping details will be collected privately on Telegram.</p>
+
+<p class="note">
+Shipping details will be collected privately on Telegram.
+</p>
+
 <div class="nav">
 <button class="secondary" onclick="previous()">← Back</button>
 <button onclick="showReview()">Review order ♡ →</button>
@@ -105,13 +191,22 @@ a{color:#b47a93}
 <section id="review" class="hidden">
 <h2>review your order ♡</h2>
 <div id="reviewText"></div>
-<p class="note">Order code will be assigned after successful submission.</p>
-<p class="note">Final quotation will be sent through Telegram before payment.</p>
+
+<p class="note">
+Order code will be assigned after successful submission.
+</p>
+
+<p class="note">
+Final quotation will be sent through Telegram before payment.
+</p>
+
 <label>
 <input type="checkbox" id="agree">
 I understand the final quotation may differ.
 </label>
+
 <div id="error" class="error"></div>
+
 <div class="nav">
 <button class="secondary" onclick="previous()">← Back</button>
 <button id="submitButton" onclick="submitOrder()">Submit Order ♡</button>
@@ -135,6 +230,7 @@ handmade with a little whimsy ♡ ·
 view our gallery
 </a>
 </footer>
+
 </div>
 
 <script>
@@ -143,17 +239,36 @@ view our gallery
 const ENDPOINT =
 "https://script.google.com/macros/s/AKfycbxwS1K_Vyk9vfdcvdRDiKIr2LIr0XusLacttZwYx4kmu4AgUJ1yo0O2pY-fJVD-ZATu/exec";
 
-const products = [];
-const orderItems = {};
-let currentIndex = 0;
-let currentPage = "choose";
-let confirmedOrderCode = "";
+const products=[];
+const orderItems={};
 
-const names = {
+let currentIndex=0;
+let currentPage="choose";
+let confirmedOrderCode="";
+
+const names={
 toploader:"🎀 Toploader Deco",
 binder:"🪽 Binder Deco",
 bouquet:"💐 Custom K-pop Bouquet"
 };
+
+const aesthetics=[
+"Vintage",
+"Angelcore",
+"Coquette",
+"Dark Romance"
+];
+
+const colors=[
+"Pink",
+"White",
+"Blue",
+"Purple",
+"Black",
+"Red",
+"Brown",
+"Cream"
+];
 
 function el(id){
 return document.getElementById(id);
@@ -164,87 +279,205 @@ function display(page){
 .forEach(id=>{
 el(id).classList.toggle("hidden",id!==page);
 });
+
 currentPage=page;
+
 const step=page==="choose"?1:page==="details"?2:3;
+
 document.querySelectorAll(".dot").forEach((dot,i)=>{
 dot.classList.toggle("active",i<step);
 });
+
 window.scrollTo(0,0);
 }
 
 function startOrder(){
 products.length=0;
+
 document.querySelectorAll(".product:checked").forEach(input=>{
 products.push(input.value);
 });
+
 if(products.length===0){
 alert("Please select at least one creation ♡");
 return;
 }
+
 currentIndex=0;
 renderItem();
 display("details");
 }
 
 function inputField(label,id,placeholder="",required=true){
-return `<label class="field">${label}${required?" *":""}</label>
-<input id="${id}" placeholder="${placeholder}">`;
+return `
+<label class="field">${label}${required?" *":""}</label>
+<input id="${id}" placeholder="${placeholder}">
+`;
 }
 
 function selectField(label,id,options){
-return `<label class="field">${label} *</label>
+return `
+<label class="field">${label} *</label>
 <select id="${id}">
 <option value="">Please select</option>
 ${options.map(x=>`<option value="${x}">${x}</option>`).join("")}
-</select>`;
+</select>
+`;
 }
 
 function quantityField(label,id,min=1){
-return `<label class="field">${label} *</label>
-<input id="${id}" type="number" min="${min}" value="${min}">`;
+return `
+<label class="field">${label} *</label>
+<input id="${id}" type="number" min="${min}" value="${min}">
+`;
+}
+
+function aestheticField(type){
+return selectField(
+"Aesthetic Preferences",
+type+"_aesthetic",
+aesthetics
+);
+}
+
+function colorField(type){
+return `
+<label class="field">Colour Preferences *</label>
+<p class="note">You may select more than one colour ♡</p>
+
+<div class="color-grid">
+${colors.map(color=>`
+<label class="color-option">
+<input type="checkbox"
+class="color-checkbox"
+value="${color}">
+${color}
+</label>
+`).join("")}
+</div>
+
+<label class="field">Other colours / colour combination</label>
+<input id="${type}_customColor"
+placeholder="e.g. Dusty pink + ivory">
+`;
 }
 
 function extraFields(type){
-return inputField("Design preferences",type+"_design","Your preferred design",false)
-+`<label class="field">Inspiration images (optional, maximum 3)</label>
-<input type="file" id="${type}_files" accept="image/*" multiple>`;
+return aestheticField(type)
++colorField(type)
++inputField(
+"Design preferences",
+type+"_design",
+"Your preferred design",
+false
+)
++`
+<label class="field">
+Inspiration images (optional, maximum 3)
+</label>
+<input type="file"
+id="${type}_files"
+accept="image/*"
+multiple>
+`;
 }
 
 function renderItem(){
 const type=products[currentIndex];
+
 el("itemTitle").textContent=names[type];
 
 let html="";
 
 if(type==="toploader"){
 html=
-selectField("Design category","toploader_style",
-["Simple / Minimalist","Detailed"])
-+inputField("Gallery design code","toploader_code","TL-M001")
-+quantityField("Quantity","toploader_quantity")
+selectField(
+"Design category",
+"toploader_style",
+["Simple / Minimalist","Detailed"]
+)
++inputField(
+"Gallery design code",
+"toploader_code",
+"TL-M001"
+)
++quantityField(
+"Quantity",
+"toploader_quantity"
+)
 +extraFields(type)
-+`<p class="note">Simple RM10–16 · Detailed RM18–25 per piece.</p>`;
++`
+<p class="note">
+Simple RM10–16 · Detailed RM18–25 per piece.
+</p>
+`;
 }
 
 if(type==="binder"){
 html=
-selectField("Binder option","binder_option",
-["Binder provided by lacewhim","My own binder (deco only)"])
-+inputField("Binder size","binder_size","A5")
-+inputField("Gallery / aesthetic code","binder_code","BD-001",false)
-+selectField("Add sleeves?","binder_sleeves",["No","Yes"])
-+quantityField("Quantity","binder_quantity")
+selectField(
+"Binder option",
+"binder_option",
+["Binder provided by lacewhim","My own binder (deco only)"]
+)
++inputField(
+"Binder size",
+"binder_size",
+"A5"
+)
++inputField(
+"Gallery / aesthetic code",
+"binder_code",
+"BD-001",
+false
+)
++selectField(
+"Add sleeves?",
+"binder_sleeves",
+["No","Yes"]
+)
++quantityField(
+"Quantity",
+"binder_quantity"
+)
 +extraFields(type)
-+`<p class="note">Own binder RM20–35 · Binder by lacewhim RM25–40. Sleeves +RM8–12. For deco-only orders, buyers cover shipping both ways.</p>`;
++`
+<p class="note">
+Own binder RM20–35 · Binder by lacewhim RM25–40.
+Sleeves +RM8–12.
+For deco-only orders, buyers cover shipping both ways.
+</p>
+`;
 }
 
 if(type==="bouquet"){
 html=
-inputField("Wrapper gallery code","bouquet_wrapper","WR-001")
-+inputField("Flower gallery code","bouquet_flower","FL-001")
-+quantityField("Number of photocards","bouquet_photocards",1)
-+quantityField("Quantity of bouquets","bouquet_quantity",1)
-+`<p class="note">Bouquet price will be quoted individually. Flower quantity is decided by lacewhim.</p>`;
+inputField(
+"Wrapper gallery code",
+"bouquet_wrapper",
+"WR-001"
+)
++inputField(
+"Flower gallery code",
+"bouquet_flower",
+"FL-001"
+)
++quantityField(
+"Number of photocards",
+"bouquet_photocards",
+1
+)
++quantityField(
+"Quantity of bouquets",
+"bouquet_quantity",
+1
+)
++`
+<p class="note">
+Bouquet price will be quoted individually.
+Flower quantity is decided by lacewhim.
+</p>
+`;
 }
 
 el("itemFields").innerHTML=html;
@@ -252,9 +485,14 @@ el("itemFields").innerHTML=html;
 if(orderItems[type]){
 Object.entries(orderItems[type]).forEach(([key,value])=>{
 const field=el(type+"_"+key);
-if(field&&field.type!=="file"){
+
+if(field&&field.type!=="file"&&key!=="colors"){
 field.value=value;
 }
+});
+
+document.querySelectorAll(".color-checkbox").forEach(box=>{
+box.checked=(orderItems[type].colors||[]).includes(box.value);
 });
 }
 }
@@ -262,7 +500,10 @@ field.value=value;
 function saveItem(){
 const type=products[currentIndex];
 const data={};
-const fields=el("itemFields").querySelectorAll("input:not([type=file]),select,textarea");
+
+const fields=el("itemFields").querySelectorAll(
+"input:not([type=file]):not([type=checkbox]),select,textarea"
+);
 
 for(const field of fields){
 const key=field.id.replace(type+"_","");
@@ -276,6 +517,7 @@ return false;
 
 if(field.type==="number"){
 const n=Number(value);
+
 if(!Number.isInteger(n)||n<Number(field.min||1)){
 alert("Please enter a valid quantity ♡");
 field.focus();
@@ -289,13 +531,30 @@ toploader:["code"],
 binder:["size"],
 bouquet:["wrapper","flower"]
 };
+
 if(requiredKeys[type].includes(key)){
 alert("Please complete "+key+" ♡");
 field.focus();
 return false;
 }
 }
+
 data[key]=value;
+}
+
+if(type!=="bouquet"){
+data.colors=[
+...document.querySelectorAll(".color-checkbox:checked")
+].map(box=>box.value);
+
+if(data.customColor){
+data.colors.push(data.customColor);
+}
+
+if(data.colors.length===0){
+alert("Please choose at least one colour ♡");
+return false;
+}
 }
 
 const fileInput=el(type+"_files");
@@ -360,6 +619,7 @@ function priceEstimate(){
 let low=0;
 let high=0;
 let bouquet=false;
+
 const lines=[];
 
 products.forEach(type=>{
@@ -370,21 +630,30 @@ if(type==="toploader"){
 const detailed=item.style==="Detailed";
 const a=detailed?18:10;
 const b=detailed?25:16;
+
 low+=a*qty;
 high+=b*qty;
-lines.push(`Toploader × ${qty}: RM${a*qty}–RM${b*qty}`);
+
+lines.push(
+`Toploader × ${qty}: RM${a*qty}–RM${b*qty}`
+);
 }
 
 if(type==="binder"){
 let a=item.option==="My own binder (deco only)"?20:25;
 let b=item.option==="My own binder (deco only)"?35:40;
+
 if(item.sleeves==="Yes"){
 a+=8;
 b+=12;
 }
+
 low+=a*qty;
 high+=b*qty;
-lines.push(`Binder × ${qty}: RM${a*qty}–RM${b*qty}`);
+
+lines.push(
+`Binder × ${qty}: RM${a*qty}–RM${b*qty}`
+);
 }
 
 if(type==="bouquet"){
@@ -394,7 +663,10 @@ lines.push(`Bouquet × ${qty}: Price TBA`);
 });
 
 return {
-low,high,bouquet,lines,
+low,
+high,
+bouquet,
+lines,
 text:`RM${low}–RM${high}${bouquet?" + bouquet TBA":""}`
 };
 }
@@ -408,25 +680,42 @@ alert("Please complete your name and Telegram username ♡");
 return;
 }
 
-let html=`<div class="summary">
+let html=`
+<div class="summary">
 <b>Name:</b> ${escapeHTML(name)}<br>
 <b>Telegram:</b> ${escapeHTML(telegram)}
-</div>`;
+</div>
+`;
 
 products.forEach(type=>{
 html+=`<h3>${names[type]}</h3><div class="summary">`;
+
 Object.entries(orderItems[type]).forEach(([key,value])=>{
 if(key==="images")return;
-html+=`<b>${escapeHTML(key)}:</b> ${escapeHTML(value)}<br>`;
+
+const displayValue=Array.isArray(value)
+?value.join(", ")
+:value;
+
+html+=`
+<b>${escapeHTML(key)}:</b>
+${escapeHTML(displayValue)}<br>
+`;
 });
+
 html+="</div>";
 });
 
 const estimate=priceEstimate();
-html+=`<h3>Estimated price ♡</h3>
-<div class="summary">${estimate.lines.map(escapeHTML).join("<br>")}
-<br><br><b>Total estimate: ${escapeHTML(estimate.text)}</b>
-</div>`;
+
+html+=`
+<h3>Estimated price ♡</h3>
+<div class="summary">
+${estimate.lines.map(escapeHTML).join("<br>")}
+<br><br>
+<b>Total estimate: ${escapeHTML(estimate.text)}</b>
+</div>
+`;
 
 el("reviewText").innerHTML=html;
 display("review");
@@ -434,7 +723,8 @@ display("review");
 
 async function submitOrder(){
 if(!el("agree").checked){
-el("error").textContent="Please accept the quotation note ♡";
+el("error").textContent=
+"Please accept the quotation note ♡";
 return;
 }
 
@@ -461,7 +751,9 @@ items:items
 try{
 const response=await fetch(ENDPOINT,{
 method:"POST",
-headers:{"Content-Type":"text/plain;charset=utf-8"},
+headers:{
+"Content-Type":"text/plain;charset=utf-8"
+},
 body:JSON.stringify(payload)
 });
 
@@ -472,13 +764,21 @@ throw new Error("Server error "+response.status);
 const result=await response.json();
 
 if(result.success!==true){
-throw new Error(result.error||"Order was not confirmed");
+throw new Error(
+result.error||"Order was not confirmed"
+);
 }
 
-confirmedOrderCode=result.orderId||result.orderCode||result.code||"";
+confirmedOrderCode=
+result.orderId||
+result.orderCode||
+result.code||
+"";
 
 if(!confirmedOrderCode){
-throw new Error("Order saved but no order code returned");
+throw new Error(
+"Order saved but no order code returned"
+);
 }
 
 el("confirmedCode").textContent=confirmedOrderCode;
@@ -486,7 +786,8 @@ display("success");
 
 }catch(error){
 el("error").textContent=
-"Unable to confirm submission: "+error.message+
+"Unable to confirm submission: "+
+error.message+
 ". Please check Google Sheets before trying again.";
 }finally{
 button.disabled=false;
@@ -496,6 +797,7 @@ button.textContent="Submit Order ♡";
 
 function copyCode(){
 const text=confirmedOrderCode;
+
 navigator.clipboard.writeText(text)
 .then(()=>alert("Order code copied ♡"))
 .catch(()=>prompt("Copy your order code:",text));
